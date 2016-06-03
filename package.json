@@ -12,7 +12,11 @@
 		"ejs": "~2.3.3",
 		"express": "~4.13.1",
 		"morgan": "~1.6.1",
-		"serve-favicon": "~2.3.0"
+		"serve-favicon": "~2.3.0",
+		"express-session": "^1.13.0",
+		"mongoose": "^4.4.6",
+		"connect-mongo": "^1.1.0",
+		"crypto": "0.0.3"
 	},
 	"description": "dc公司代码",
 	"main": "app.js",
