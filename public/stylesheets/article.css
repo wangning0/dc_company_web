@@ -1,0 +1,12 @@
+.edui-default{
+	width: auto !important
+}
+.edui-editor  {
+	width: auto !important;
+}
+.edui-editor-toolbarbox  .edui-default{
+	width: auto !important;
+}
+.edui-editor-toolbarbox.edui-default{
+	width: auto !important;
+}

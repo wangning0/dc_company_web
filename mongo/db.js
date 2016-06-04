@@ -31,7 +31,12 @@ module.exports = {
 	},
 	getAllArticle: function(cb) {
 		var Article = dbModels.getModel('article');
-		Article.find({}, function(err, docs) {
+		/*Article.find({}, function(err, docs) {
+			cb(err, docs);
+		})*/
+		Article.find({}).sort({
+			'timeDesc': 'desc'
+		}).exec(function(err, docs) {
 			cb(err, docs);
 		})
 	},
@@ -40,5 +45,54 @@ module.exports = {
 		Article.find(articleInfo, function(err, doc) {
 			cb(err, doc);
 		})
+	},
+	deleteArticle: function(articleInfo, cb) {
+		var Article = dbModels.getModel('article');
+		Article.remove(articleInfo, function(err, docs) {
+			cb(err, docs);
+		})
+	},
+	getOneArticle: function(info, cb) {
+		var Article = dbModels.getModel('article');
+		Article.find(info, function(err, doc) {
+			cb(err, doc);
+		})
+	},
+	getAllByYear: function(cb) {
+		var Article = dbModels.getModel('article');
+		Article.find({}, function(err, docs) {
+			if (err) {
+				cb(err);
+			} else {
+				var docsObj = {};
+				docs.forEach(function(item, index) {
+					/*if (b[item.year]) {
+						b[item.year].push(item);
+					} else {
+						b[item.year] = [item];
+					}*/
+					docsObj[item.year] ? docsObj[item.year].push(item) : docsObj[item.year] = [item]
+				})
+				cb(err, docsObj);
+			}
+		})
+	},
+	//PersonModel.update({_id:_id},{$set:{name:'MDragon'}},function(err){});
+	modifyArticle: function(info, articleInfo, cb) {
+		var Article = dbModels.getModel('article');
+		Article.update(info, {
+			$set: {
+				"title": articleInfo.title,
+				"time": articleInfo.time,
+				"article": articleInfo.article,
+				"year": articleInfo.year,
+				"timeDesc": articleInfo.timeDesc,
+				"author": articleInfo.author,
+				"month": articleInfo.month,
+				"day": articleInfo.day
+			}
+		}, function(err, doc) {
+			cb(err, doc);
+		});
 	}
 }

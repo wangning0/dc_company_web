@@ -6,6 +6,7 @@
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 	<title>深圳同创鼎城投资有限公司</title>
 	<link rel="stylesheet" href="/stylesheets/index.css">
+	<script src="/javascripts/avalon.js"></script>
 	<script src="/javascripts/jquery.min.js"></script>
 	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ELEpUI0PRjAlUrycAaSXE0Ge2gpltthG"></script>
 </head>
@@ -84,138 +85,28 @@
 					<p class="container_nav_title">最新动态</p>
 					<div class="container_nav_line"></div>
 				</div>
-				<div class="last_active_container">
+				<div class="last_active_container" ms-controller="article">
 					<div>
-						<dl class="article_list_23_tl">
-							<dt>2016</dt>
-							<dd>
+						<dl class="article_list_23_tl" ms-repeat="article">
+							<dt>{{$key}}</dt>
+							<dd ms-repeat="$val">
 								<div class="article_list_23_tlDate">
 									<span class="article_list_23_tlDateBar">
 										<div class="article_list_23_tlRadius"></div>
-										<span class="article_list_23_tlDateText">05<b>18</b></span>
+										<span class="article_list_23_tlDateText">{{el.month}}<b>{{el.day}}</b></span>
 									</span>
 								</div>
 								<div class="article_list_23_tlMain">
 									<div class="article_list_23_tlMainIcon"></div>
 									<h4 class="article_list_23_tlMainTitle">
-										<a href="">美玩易试获千万级Pre-A，美妆会是一个更适合做校园O2O的品类吗？</a>
+										<a href="">{{el.title}}</a>
 									</h4>
 									<div class="article_list_23_tlMainRow clearfix article_list_23_tlNoPic">
 										<div class="article_list_23_tlMainText">
 											<p class="article_list_23_tlMainContent">
-												36 氪获悉，校园美妆平台 “美玩易试” 已完成千万人民币级 Pre-A 轮融资，本轮由艾瑞资本领投、耀途资本跟投，另有一家产业机构（尚不透露名称）参与其中。美玩易试于去年 9 月正式上线，迄今共获得三笔融资。 
+												{{el.article | html}} 
 											</p>
-											<p class="article_list_23_tlFoot">2016/05/18 18:42</p>
-										</div>
-									</div>
-								</div>
-							</dd>
-							<dd>
-								<div class="article_list_23_tlDate">
-									<span class="article_list_23_tlDateBar">
-										<div class="article_list_23_tlRadius"></div>
-										<span class="article_list_23_tlDateText">05<b>18</b></span>
-									</span>
-								</div>
-								<div class="article_list_23_tlMain">
-									<div class="article_list_23_tlMainIcon"></div>
-									<h4 class="article_list_23_tlMainTitle">
-										<a href="">美玩易试获千万级Pre-A，美妆会是一个更适合做校园O2O的品类吗？</a>
-									</h4>
-									<div class="article_list_23_tlMainRow clearfix article_list_23_tlNoPic">
-										<div class="article_list_23_tlMainText">
-											<p class="article_list_23_tlMainContent">
-												36 氪获悉，校园美妆平台 “美玩易试” 已完成千万人民币级 Pre-A 轮融资，本轮由艾瑞资本领投、耀途资本跟投，另有一家产业机构（尚不透露名称）参与其中。美玩易试于去年 9 月正式上线，迄今共获得三笔融资。 
-											</p>
-											<p class="article_list_23_tlFoot">2016/05/18 18:42</p>
-										</div>
-									</div>
-								</div>
-							</dd>
-							<dd>
-								<div class="article_list_23_tlDate">
-									<span class="article_list_23_tlDateBar">
-										<div class="article_list_23_tlRadius"></div>
-										<span class="article_list_23_tlDateText">05<b>18</b></span>
-									</span>
-								</div>
-								<div class="article_list_23_tlMain">
-									<div class="article_list_23_tlMainIcon"></div>
-									<h4 class="article_list_23_tlMainTitle">
-										<a href="">美玩易试获千万级Pre-A，美妆会是一个更适合做校园O2O的品类吗？</a>
-									</h4>
-									<div class="article_list_23_tlMainRow clearfix article_list_23_tlNoPic">
-										<div class="article_list_23_tlMainText">
-											<p class="article_list_23_tlMainContent">
-												36 氪获悉，校园美妆平台 “美玩易试” 已完成千万人民币级 Pre-A 轮融资，本轮由艾瑞资本领投、耀途资本跟投，另有一家产业机构（尚不透露名称）参与其中。美玩易试于去年 9 月正式上线，迄今共获得三笔融资。 
-											</p>
-											<p class="article_list_23_tlFoot">2016/05/18 18:42</p>
-										</div>
-									</div>
-								</div>
-							</dd>
-							<dd>
-								<div class="article_list_23_tlDate">
-									<span class="article_list_23_tlDateBar">
-										<div class="article_list_23_tlRadius"></div>
-										<span class="article_list_23_tlDateText">05<b>18</b></span>
-									</span>
-								</div>
-								<div class="article_list_23_tlMain">
-									<div class="article_list_23_tlMainIcon"></div>
-									<h4 class="article_list_23_tlMainTitle">
-										<a href="">美玩易试获千万级Pre-A，美妆会是一个更适合做校园O2O的品类吗？</a>
-									</h4>
-									<div class="article_list_23_tlMainRow clearfix article_list_23_tlNoPic">
-										<div class="article_list_23_tlMainText">
-											<p class="article_list_23_tlMainContent">
-												36 氪获悉，校园美妆平台 “美玩易试” 已完成千万人民币级 Pre-A 轮融资，本轮由艾瑞资本领投、耀途资本跟投，另有一家产业机构（尚不透露名称）参与其中。美玩易试于去年 9 月正式上线，迄今共获得三笔融资。 
-											</p>
-											<p class="article_list_23_tlFoot">2016/05/18 18:42</p>
-										</div>
-									</div>
-								</div>
-							</dd>
-							<dd>
-								<div class="article_list_23_tlDate">
-									<span class="article_list_23_tlDateBar">
-										<div class="article_list_23_tlRadius"></div>
-										<span class="article_list_23_tlDateText">05<b>18</b></span>
-									</span>
-								</div>
-								<div class="article_list_23_tlMain">
-									<div class="article_list_23_tlMainIcon"></div>
-									<h4 class="article_list_23_tlMainTitle">
-										<a href="">美玩易试获千万级Pre-A，美妆会是一个更适合做校园O2O的品类吗？</a>
-									</h4>
-									<div class="article_list_23_tlMainRow clearfix article_list_23_tlNoPic">
-										<div class="article_list_23_tlMainText">
-											<p class="article_list_23_tlMainContent">
-												36 氪获悉，校园美妆平台 “美玩易试” 已完成千万人民币级 Pre-A 轮融资，本轮由艾瑞资本领投、耀途资本跟投，另有一家产业机构（尚不透露名称）参与其中。美玩易试于去年 9 月正式上线，迄今共获得三笔融资。 
-											</p>
-											<p class="article_list_23_tlFoot">2016/05/18 18:42</p>
-										</div>
-									</div>
-								</div>
-							</dd>
-							<dd>
-								<div class="article_list_23_tlDate">
-									<span class="article_list_23_tlDateBar">
-										<div class="article_list_23_tlRadius"></div>
-										<span class="article_list_23_tlDateText">05<b>18</b></span>
-									</span>
-								</div>
-								<div class="article_list_23_tlMain">
-									<div class="article_list_23_tlMainIcon"></div>
-									<h4 class="article_list_23_tlMainTitle">
-										<a href="">美玩易试获千万级Pre-A，美妆会是一个更适合做校园O2O的品类吗？</a>
-									</h4>
-									<div class="article_list_23_tlMainRow clearfix article_list_23_tlNoPic">
-										<div class="article_list_23_tlMainText">
-											<p class="article_list_23_tlMainContent">
-												36 氪获悉，校园美妆平台 “美玩易试” 已完成千万人民币级 Pre-A 轮融资，本轮由艾瑞资本领投、耀途资本跟投，另有一家产业机构（尚不透露名称）参与其中。美玩易试于去年 9 月正式上线，迄今共获得三笔融资。 
-											</p>
-											<p class="article_list_23_tlFoot">2016/05/18 18:42</p>
+											<p class="article_list_23_tlFoot">{{el.time}}</p>
 										</div>
 									</div>
 								</div>

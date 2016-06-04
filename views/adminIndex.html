@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>后台管理首页</title>
+	<link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+	<link rel="stylesheet" href="/stylesheets/admin.css">
+	<script src="/javascripts/jquery.min.js"></script>
+	<script src="/javascripts/bootstrap.min.js"></script>
+	<script src="/javascripts/avalon.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">鼎诚管理系统</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="/admin/index">文章管理<span class="sr-only">(current)</span></a></li>
+	        <li><a href="/adminArticle">发表文章</a></li>
+	        
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= username %><span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><a>修改密码</a></li>
+	            <li><a href="/admin/logout">登出</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+<div>
+	<table class="table table-bordered ms-controller" ms-controller="adminCtrl">
+		<thead>
+			<th>发表时间</th>
+			<th>文章标题</th>
+			<th>作者</th>
+			<th>文章操作</th>
+		</thead>
+		<tbody>
+			<tr ms-repeat="allArticle">
+				<td>{{el.time}}</td>
+				<td>{{el.title}}</td>
+				<td>{{el.author}}</td>
+				<td><button style="margin-right: 10px" ms-attr-id="el._id" class="btn btn-default modifyArticle">修改</button><button class="btn btn-danger deleteArticle" ms-attr-id="el._id" style="margin-left: 10px" type="button" data-toggle="modal"  data-target="#deleteModal">删除</button></td>
+			</tr> 
+		</tbody>
+	</table>
+</div>
+<!-- 模态框的使用 -->
+<div class="modal fade" tabindex="-1"  role="dialog" id="deleteModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">删除文章</h4>
+      </div>
+      <div class="modal-body">
+        <p>确认删除该文章么？</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary deleteArticleSure" data-dismiss="modal">确认</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" tabindex="-1"  role="dialog" id="deleteSuccessModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <p>删除成功</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary reload" data-dismiss="modal">确认</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script>
+	$('.dropdown-toggle').dropdown()
+</script>
+<script src="/javascripts/admin.js"></script>
+</body>
+</html>
