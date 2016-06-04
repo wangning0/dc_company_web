@@ -19,6 +19,9 @@ a{
 #wrapper{
 	width: 100%;
 }
+.ms-controller{
+	display: none;
+}
 .header_nav {
 	height: 64px;
 	opacity: 1;
@@ -256,6 +259,9 @@ li span{
 .article_list_23_tlFoot{
 	margin-top: 10px;
 	font-size: 0.9em;
+}
+.article_list_23_tl a:hover{
+	cursor: pointer;
 }
 h4{
 	    font-size: 22px;

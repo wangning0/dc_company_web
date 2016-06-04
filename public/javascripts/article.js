@@ -83,14 +83,11 @@
  function setContent(content, isAppendTo) {
      UE.getEditor('editor').setContent(content, isAppendTo);
  }
-
- function getUrlParam(name) {
-     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-     var r = window.location.search.substr(1).match(reg);
-     if (r != null) {
-         return unescape(r[2]);
-     }
-     return null;
- }
-
- console.log(getUrlParam('_id'));
+function getUrlParam(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) {
+        return unescape(r[2]);
+    }
+    return null;
+}

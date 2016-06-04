@@ -94,5 +94,15 @@ module.exports = {
 		}, function(err, doc) {
 			cb(err, doc);
 		});
+	},
+	modifyPasswd: function(userinfo, passwdinfo, cb) {
+		var User = dbModels.getModel('user');
+		User.update(userinfo, {
+			$set: {
+				"passwd": passwdinfo.passwd
+			}
+		}, function(err, doc) {
+			cb(err, doc);
+		});
 	}
 }

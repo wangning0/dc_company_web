@@ -20,7 +20,7 @@ router.post('/admin/login', function(req, res, next) {
 		console.log('doc', doc);
 		doc = doc ? doc : [];
 		console.log(doc, 'doc');
-		if (err) {
+		if (err || doc.length == 0) {
 			res.redirect('/admin/login');
 		} else {
 			req.session.username = req.body.username;
@@ -99,7 +99,6 @@ router.get('/admin/getAll', function(req, res, next) {
 	})
 });
 router.get('/admin/getOneArticle', function(req, res, next) {
-	checkAuthor(req, res);
 	var _id = req.query._id;
 	var _info = {
 		_id: _id
@@ -177,7 +176,6 @@ router.get('/admin/deleteArticle', function(req, res, next) {
 	})
 });
 router.get('/admin/getAllByYear', function(req, res, next) {
-	checkAuthor(req, res);
 	db.getAllByYear(function(err, docs) {
 		if (err) {
 			res.status(200).send({
@@ -191,6 +189,38 @@ router.get('/admin/getAllByYear', function(req, res, next) {
 			});
 		}
 	})
+})
+router.get('/article/detail', function(req, res, next) {
+	res.render('articleDetail');
+})
+router.get('/modifyPasswd', function(req, res, next) {
+	checkAuthor(req, res);
+	res.render('modifyPasswd', {
+		username: req.session.username
+	})
+})
+router.post('/modifyPasswd', function(req, res, next) {
+	checkAuthor(req, res);
+	var info = {};
+	info.passwd = encrypt.encrypt(req.body.passwd)
+	db.modifyPasswd({
+		username: 'admin'
+	}, info, function(err, doc) {
+		if (err) {
+			res.status(200).send({
+				status: 1,
+				body: err
+			});
+		} else {
+			res.status(200).send({
+				status: 0
+			});
+		}
+	})
+})
+router.get('/clearsession', function(req, res, next) {
+	checkAuthor(req, res);
+	req.session.username == null;
 })
 router.get('/admin/logout', function(req, res, next) {
 	checkAuthor(req, res);

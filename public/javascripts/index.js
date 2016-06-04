@@ -30,3 +30,7 @@ $.ajax({
 		alert('服务器错误!');
 	}
 })
+$(document).on('click', '.article_list_23_tlMainTitle a', function() {
+	var _id = $(this).attr('id');
+	location.href = '/article/detail?_id=' + _id;
+})

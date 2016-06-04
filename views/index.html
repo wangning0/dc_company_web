@@ -85,7 +85,7 @@
 					<p class="container_nav_title">最新动态</p>
 					<div class="container_nav_line"></div>
 				</div>
-				<div class="last_active_container" ms-controller="article">
+				<div class="last_active_container ms-controller" ms-controller="article">
 					<div>
 						<dl class="article_list_23_tl" ms-repeat="article">
 							<dt>{{$key}}</dt>
@@ -99,7 +99,7 @@
 								<div class="article_list_23_tlMain">
 									<div class="article_list_23_tlMainIcon"></div>
 									<h4 class="article_list_23_tlMainTitle">
-										<a href="">{{el.title}}</a>
+										<a ms-attr-id="el._id">{{el.title}}</a>
 									</h4>
 									<div class="article_list_23_tlMainRow clearfix article_list_23_tlNoPic">
 										<div class="article_list_23_tlMainText">
