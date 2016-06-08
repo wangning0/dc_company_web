@@ -34,3 +34,17 @@ $(document).on('click', '.article_list_23_tlMainTitle a', function() {
 	var _id = $(this).attr('id');
 	location.href = '/article/detail?_id=' + _id;
 })
+
+$(".header_nav li a").click(function(event) {
+	var index = this.title
+	var id = '#' + index;
+	console.log(id)
+	$("html,body").animate({
+		scrollTop: $(id).offset().top
+	}, 1000);
+	$('.active').removeClass('active');
+	$(this).addClass('active');
+});
+$('.wechat_image').click(function() {
+	location.href = '/images/wechat_.png'
+})

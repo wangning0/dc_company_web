@@ -16,15 +16,15 @@
 		<div class="header" id="index">
 			<div class="header_nav">
 				<ul>
-					<li class="img"><img src="/images/3.png" alt="鼎城投资"></li>
-					<li class="index"><a href="#index">首页</a><span></span></li>
+					<li class="img"><img src="/images/logo.gif" alt="鼎城投资"></li>
+					<li class="index"><a href="javascript:void(0)" class="active" title="index">首页</a><span></span></li>
 					<div>
-						<li><a href="#about_us">关于我们</a></li>
-						<li><a href="#investment_arrow">投资方向</a></li>
-						<li><a href="#investment_examples">投资案例</a></li>
-						<li><a href="#manage_group">管理团队</a></li>
-						<li><a href="#last_news">最新动态</a></li>
-						<li class="last"><a href="#concat_us">联系我们</a></li>
+						<li><a  href="javascript:void(0)" title="about_us">关于我们</a></li>
+						<li><a  href="javascript:void(0)" title="investment_arrow">投资方向</a></li>
+						<li><a  href="javascript:void(0)" title="investment_examples">投资案例</a></li>
+						<li><a  href="javascript:void(0)" title="manage_group">管理团队</a></li>
+						<li><a  href="javascript:void(0)" title="last_news">最新动态</a></li>
+						<li class="last"><a  href="javascript:void(0)" title="concat_us">联系我们</a></li>
 					</div>
 				</ul>
 			</div>
@@ -118,7 +118,7 @@
 			</div>
 			<div class="concat_us" id="concat_us">
 				<div class="container_nav">
-					<p class="container_nav_title" style="background: red">联系我们</p>
+					<p class="container_nav_title" style="background: white;color:#09424A;">联系我们</p>
 					<div class="container_nav_line"></div>
 				</div>
 				<div class="concat_us_container">
@@ -127,8 +127,44 @@
 						<p class="add_address">地址: 深圳市南山区南山大道1088号南园枫叶大厦17L</p>
 						<p class="add_email">Email:linxc@cdcfund.com(林先生)</p>
 					</div>
-					<div class="container_list">
-						<div id="l-map"></div>
+					<div class="container_body">
+						<div class="container_list change" style="background: #0E4C55">
+							<div class="container_list_first">
+								<div class="first">
+									<div class="img">
+										<img src="/images/email.png" alt="">
+									</div>
+									<p>提交商业计划书</p>
+									<p>dc@cdcfund.com</p>
+								</div>
+								<div class="second">
+									<div class="img">
+										<img src="/images/join.png" alt="">
+									</div>
+									<p>加入鼎诚投资</p>
+									<p>dc@cdcfund.com</p>
+								</div>
+							</div>
+							<div class="container_list_second">
+								<div class="first">
+									<div class="img wechat_image">
+										<img src="/images/wechat.png" alt="">
+									</div>
+									<p>关注鼎诚投资</p>
+									<p>鼎诚投资</p>
+								</div>
+								<div class="second">
+									<div class="img">
+										<img src="/images/phone.png" alt="">
+									</div>
+									<p>联系电话</p>
+									<p>0755-33122588</p>
+								</div>
+							</div>
+						</div>
+						<div class="container_list">
+							<div id="l-map"></div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -139,7 +175,7 @@
 	</div>
 	<script src="/javascripts/index.js"></script>
 	<script>
-		var sContent ="<h3 style='color:red'>鼎城投资</h3><p style='font-size:10px;margin-top:5px;'>地址: 深圳市南山区南山大道1088号南园枫叶大厦17L</p><p style='font-size:10px;margin-top:5px'>Email: linxc@cdcfund.com(林先生)</p>";
+		var sContent ="<h3 style='color:red;margin-bottom:15px;'>鼎城投资</h3><p style='font-size:10px;margin-top:5px;'>地址: 深圳市南山区南山大道1088号南园枫叶大厦17L</p>";
 		var map = new BMap.Map("l-map");
 		var point = new BMap.Point(113.927965,22.522756);
 		map.centerAndZoom(point, 15);
