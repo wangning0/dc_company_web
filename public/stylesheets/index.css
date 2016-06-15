@@ -88,6 +88,33 @@ li span{
 	top: 13px;
 	z-index: -1;
 }
+.manage_group_container .teamName {
+	width: 60px;
+	margin:20px auto;
+	letter-spacing: 0px;
+	color: black;
+	border-bottom: 2px solid #636363;
+}
+.manage_group_container .teamName span{
+	color: #59a9d0;
+}
+.teamList{
+	display: inline-block;
+	float: left;
+	width: 16%;
+	margin:0.3%;
+}
+.teamList .name{
+	font-size: 14px !important;
+}
+.teamList img{
+	width: 100%;
+}
+.teamShow .teamList p{
+	letter-spacing: 0;
+	color: black;
+	font-size: 10px;
+}
 .about_us{
 	padding-top: 75px;
 }
@@ -98,6 +125,8 @@ li span{
 	font-size: 0.9em;
 	color: #3A6F77;
 	line-height: 20px;
+	letter-spacing: 3px;
+	font-size: 15px;
 }
 .investment_arrow , .manage_group{
 	background: url(/images/bg.jpg);
@@ -113,6 +142,8 @@ li span{
 	font-size: 0.9em;
 	color: #3A6F77;
 	line-height: 20px;
+	letter-spacing: 3px;
+	font-size: 15px;
 }
 .investment_examples{
 	padding-top: 75px;
@@ -139,6 +170,8 @@ li span{
 	font-size: 0.9em;
 	color: #3A6F77;
 	line-height: 20px;
+	letter-spacing: 3px;
+	font-size: 15px;
 }
 .manage_group_container{
 	padding: 5% 5%;
@@ -147,6 +180,8 @@ li span{
 	font-size: 0.9em;
 	color: #3A6F77;
 	line-height: 20px;
+	letter-spacing: 3px;
+	font-size: 15px;
 }
 .last_active{
 	padding-top: 75px;
@@ -405,7 +440,23 @@ h4 a{
 	font-size: 10px;
 	color: white;
 }
-
+.teamList{
+	display: inline-block;
+	float: left;
+	width: 32%;
+	margin:0.3%;
+}
+.teamList .name{
+	font-size: 14px !important;
+}
+.teamList img{
+	width: 100%;
+}
+.teamShow .teamList p{
+	letter-spacing: 0;
+	color: black;
+	font-size: 10px;
+}
 }
 @media screen and (max-width: 790px) {
 .container_list{
@@ -500,6 +551,23 @@ concat_us_container .add_title{
 .concat_us_container .add_email{
 	font-size: 10px;
 	color: white;
+}
+.teamList{
+	display: inline-block;
+	float: left;
+	width: 49%;
+	margin:0.3%;
+}
+.teamList .name{
+	font-size: 14px !important;
+}
+.teamList img{
+	width: 100%;
+}
+.teamShow .teamList p{
+	letter-spacing: 0;
+	color: black;
+	font-size: 10px;
 }
 }
 
