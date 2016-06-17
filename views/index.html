@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="renderer" content="webkit"> 
+	<meta name="renderer" content="webkit" /> 
 	<meta charset="UTF-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
@@ -221,11 +221,12 @@
 		var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
 		map.openInfoWindow(infoWindow,point); //开启信息窗口
 		console.log($(window).height())
-		$('.banner').css('width',$(window).width());
-		$('.banner').css('height',$(window).height());
+		var width = $('.banner').css('width',$(window).width());
+		//$('.banner').css('height',$(window).height());
+		var height = width/1.78; 
 		$(window).resize(function(){
-			$('.banner').css('width',$(window).width());
-			$('.banner').css('height',$(window).height());
+			$('.banner').css('width',width);
+			$('.banner').css('height',height);
 		})
 	</script>
 </body>
