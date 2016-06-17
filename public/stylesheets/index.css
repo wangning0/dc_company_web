@@ -93,7 +93,8 @@ li span{
 	z-index: -1;
 }
 .manage_group_container .teamName {
-	width: 60px;
+	width: 62px;
+	padding-left: 2px;
 	margin:20px auto;
 	letter-spacing: 0px;
 	color: black;
