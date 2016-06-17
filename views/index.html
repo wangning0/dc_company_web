@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="renderer" content="webkit">
+	<meta name="renderer" content="webkit|ie-stand" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 	<title>深圳同创鼎城投资有限公司</title>
@@ -220,6 +221,13 @@
 		map.centerAndZoom(point, 15);
 		var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
 		map.openInfoWindow(infoWindow,point); //开启信息窗口
+		console.log($(window).height())
+		$('.banner').css('width',$(window).width());
+		$('.banner').css('height',$(window).height());
+		$(window).resize(function(){
+			$('.banner').css('width',$(window).width());
+			$('.banner').css('height',$(window).height());
+		})
 	</script>
 </body>
 </html>
