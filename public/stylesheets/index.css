@@ -32,7 +32,7 @@ a{
 	position: fixed;
 	top: 0px;
 	width: 100%;
-	background: rgba(30,91,100,0.6);
+	background: rgba(203, 218, 220, 0.6);
 	z-index: 2;
 }
 .header_nav ul .index{
