@@ -16,7 +16,7 @@
 		<div class="header" id="index">
 			<div class="header_nav">
 				<ul>
-					<li><img src="/images/logo.png" alt="鼎城投资"></li>
+					<li><img src="/images/logo.png" alt="鼎诚投资"></li>
 					<li class="index"><a href="javascript:void(0)" class="active" title="index">首页</a><span></span></li>
 					<div>
 						<li><a  href="javascript:void(0)" title="about_us">关于我们</a></li>
@@ -28,7 +28,11 @@
 					</div>
 				</ul>
 			</div>
-		<img class="banner" src="/images/banner.png" alt="深圳同创鼎诚投资有限公司">
+		<div style="position: relative;">
+			<img class="banner" src="/images/banner.jpg" alt="深圳同创鼎诚投资有限公司">
+			<img class="logo_png" src="/images/logo.png" alt="鼎诚投资">
+			<p class="god" style="font-family:STKaiti">企业家是上帝</p>
+		</div>
 		</div>
 		<div class="container">
 			<div class="about_us" id="about_us">
@@ -222,8 +226,8 @@
 		map.openInfoWindow(infoWindow,point); //开启信息窗口
 		console.log($(window).height())
 		var width = $('.banner').css('width',$(window).width());
-		//$('.banner').css('height',$(window).height());
-		var height = width/1.78; 
+		var height=$('.banner').css('height',$(window).height());
+		//var height = width/1.78; 
 		$(window).resize(function(){
 			$('.banner').css('width',width);
 			$('.banner').css('height',height);
