@@ -922,7 +922,25 @@ concat_us_container .add_title{
 }
 .header .logo_png{
 	width: 45%;
-    height: 7%;
+    height: 8%;
+    left: 26%;
+    top: 25%;
+    position: absolute;
+}
+}
+@media screen and (max-width: 400px) {
+.god{
+	       font-family: STKaiti;
+    position: absolute;
+    top: 40%;
+    letter-spacing: 16px;
+    font-weight: bold;
+    font-size: 32px;
+    left: 14.5%;
+}
+.header .logo_png{
+	width: 45%;
+    height: 9%;
     left: 26%;
     top: 25%;
     position: absolute;
